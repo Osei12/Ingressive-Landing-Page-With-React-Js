@@ -1,0 +1,306 @@
+.menu {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.img {
+    position: relative;
+    width: 40%;
+    height: 40%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+:is(h1, p) {
+    margin: 0;
+}
+
+.container {
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+}
+
+header {
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+
+    ul {
+        gap: 2em;
+    }
+
+    a {
+        position: relative;
+        font-weight: 500;
+        font-size: 20px;
+        transition: 0.3s ease-in-out;
+    }
+
+    img {
+        width: 40px;
+    }
+
+    .title-show {
+        display: none;
+    }
+
+    h3 {
+        font-size: 18px;
+        line-height: 0.9;
+    }
+}
+
+.menu {
+    width: 40px;
+}
+
+.navigation {
+    flex-grow: 1;
+    align-items: center;
+}
+
+.primary-list {
+    margin: 0 auto;
+
+    a {
+        font-size: 14px !important;
+        color: black;
+    }
+}
+
+
+.primary-list li a::after {
+    content: "";
+    width: 10px;
+    height: 2px;
+    background-color: red;
+    margin: auto;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.primary-list li:hover a::after {
+    display: block;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+.secondary-list {
+    margin-left: 0;
+
+    a {
+        font-weight: 600;
+        font-size: 18px;
+        color: #fff;
+    }
+
+    li {
+        background-color: #18db69;
+        padding: 0.3em 1em;
+        border-radius: 30px;
+    }
+}
+
+section.container {
+    max-width: 85%;
+}
+
+.hero {
+    align-items: center;
+}
+
+.hero>* {
+    flex-basis: 100%;
+}
+
+
+.content {
+    max-width: 600px;
+    z-index: 1;
+
+    h1 {
+        width: 100%;
+        font-size: 3.2rem;
+        margin: auto;
+    }
+
+    p {
+        line-height: 1.2;
+        color: rgba(0, 0, 0, 0.521);
+    }
+}
+
+
+
+.media-images {
+    gap: 10px;
+    background-color: #fff;
+    margin: auto 0;
+    padding: 1.5em;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.308);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    justify-content: space-between;
+
+    img {
+        width: 30%;
+        margin: auto 0;
+    }
+}
+
+
+.btn {
+    padding: .2em 1em;
+    background-color: #18db69;
+    border-radius: 30px;
+    color: #fff;
+    margin: auto 0;
+    font-weight: bold;
+
+}
+
+.hero-butons {
+    margin: 1em;
+    gap: 1em;
+
+    img {
+        width: 30px;
+        height: 30px;
+        margin: auto;
+    }
+
+    h4 {
+        color: black;
+        font-weight: 500;
+    }
+}
+
+//media queries
+
+@media screen and (max-width:1000px) {
+    .menu {
+        display: block;
+    }
+
+
+
+    .toggleMenu {
+        position: absolute;
+        right: 10px;
+        padding: 2em;
+        z-index: 1000;
+    }
+
+    .navigation {
+        justify-content: center;
+        flex-direction: column;
+        transform: scale(1, 0);
+        transform-origin: top;
+        max-height: 0;
+        opacity: 0;
+
+        ul {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    .navigation.active {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        transform: scale(1, 1);
+        max-height: 100%;
+        opacity: 1;
+        background-color: #008d3d;
+        z-index: 999;
+        transition: 0.3s;
+
+        .primary-list a {
+            color: #fff;
+        }
+    }
+
+    .navigation.active {
+        header {
+            .title-show {
+                display: none;
+            }
+
+            h3 {
+                display: none;
+            }
+
+        }
+    }
+
+    .secondary-list {
+        margin-top: 2em;
+    }
+
+    .hero {
+        flex-wrap: wrap;
+        gap: 2em;
+        padding: 2em 0;
+    }
+}
+
+@media screen and (max-width:360px) {
+    header .title-show {
+        display: block;
+    }
+
+    header h3 {
+        display: none;
+    }
+}
+
+@media screen and (max-width:355px) {
+    .hero-butons {
+        flex-direction: column;
+        margin: 0;
+
+        img {
+            margin: auto 2px;
+        }
+    }
+}
+
+@media screen and (max-width:260px) {
+    .media-images {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:460px) {
+    .content {
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+
+@media (orientation: landscape) {
+    nav .primary-list {
+        overflow: auto;
+    }
+}
