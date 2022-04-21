@@ -26,7 +26,7 @@ ul {
 }
 
 .container {
-  max-width: 95%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -59,7 +59,7 @@ header a {
 }
 
 header img {
-  width: 40px;
+  width: 55px;
 }
 
 header .title-show {
@@ -89,7 +89,7 @@ header h3 {
 }
 
 .primary-list a {
-  font-size: 14px !important;
+  font-size: 18px !important;
   color: black;
 }
 
@@ -122,8 +122,8 @@ header h3 {
 }
 
 .secondary-list li {
-  background-color: #18db69;
-  padding: 0.3em 1em;
+  background-color: #099e47;
+  padding: 0.6em 1.8em;
   border-radius: 30px;
 }
 
@@ -149,13 +149,14 @@ section.container {
 
 .content h1 {
   width: 100%;
-  font-size: 3.2rem;
+  font-size: 3.8rem;
   margin: auto;
 }
 
 .content p {
-  line-height: 1.2;
+  line-height: 1.6;
   color: rgba(0, 0, 0, 0.521);
+  font-size: 20px;
 }
 
 .media-images {
@@ -179,8 +180,8 @@ section.container {
 }
 
 .btn {
-  padding: .2em 1em;
-  background-color: #18db69;
+  padding: .7em 1em;
+  background-color: #099e47;
   border-radius: 30px;
   color: #fff;
   margin: auto 0;
